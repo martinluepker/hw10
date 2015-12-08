@@ -18,7 +18,7 @@ const string names[NAME_NUM]={"Bruce Wayne","Bruce Banner",
 class Pedestrian
 {
 	private:
-		static const WIDTH=1;
+		static const int WIDTH=1;
 		static const char SYMBOL='p';
 		int m_pos;
 		float m_bac;
@@ -26,7 +26,7 @@ class Pedestrian
 		
 	public:
 		Pedestrian();
-		void walk();
+		void walk(Road,Car);
 		
 };
 

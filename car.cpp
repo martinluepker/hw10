@@ -37,7 +37,7 @@ void Car::enterRoad(Road &r,const int leftmostpos) const
 {
   if ((leftmostpos >= 0) &&
       (leftmostpos <= r.getWidth() - m_width))
-    r.placeCar(m_width, leftmostpos,SYMBOL);
+    r.placeObj(m_width, leftmostpos,SYMBOL);
   else cout << "Error: Car:enterRoad cannot place a"
             << " car of width " << m_width 
             << " at position " << leftmostpos

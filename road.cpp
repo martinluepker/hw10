@@ -30,22 +30,28 @@ void Road::placeObj(const int width,
   else endPos = leftmostPosition + width - 1;
   for (int i = 0; i < MAX_WIDTH; i++)
   {
-    if ((i >= leftmostPosition) && (i <= endPos))
+    
       switch(mark)
       {
-        case a:
-        m_sectors[i].ani = mark;
+        case 'a':
+          if ((i >= leftmostPosition) && (i <= endPos))
+            m_sectors[i].ani = mark;
+          else m_sectors[i].ani = EMPTY;
         break;
-        case c:
-        m_sectors[i].car = mark;
+        case 'c':
+          if ((i >= leftmostPosition) && (i <= endPos))
+            m_sectors[i].car = mark;
+          else m_sectors[i].car = EMPTY;
         break;
-        case p:
-        m_sectors[i].ped = mark;
+        case 'p':
+          if ((i >= leftmostPosition) && (i <= endPos))
+            m_sectors[i].ped = mark;
+          else m_sectors[i].ped = EMPTY;
         break;    
         default:
         cout<<"nope";
       }
-    else m_sectors[i] = EMPTY;
+      
   }
   return;
 }
@@ -54,7 +60,7 @@ void Road::placeObj(const int width,
 ostream& operator << (ostream& outs, const Road& r) 
 {
   for (int i = 0; i < r.m_width; i++)
-    outs << "|" << r.m_sectors[i];  
+    outs << "|" << r.m_sectors[i].ped;  
   outs << "|\n";
   return(outs);
 }
