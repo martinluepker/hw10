@@ -52,8 +52,8 @@ class Animal
     // MAX_STUPIDITY 
     // Postconditions: Returns true if m_stupidity >=
     // stupidity; otherwise, return false 
-    bool chooseToRun(const int stupidity) const 
-     { return(m_stupidity >= stupidity); }
+    bool chooseToRun(const int random) const 
+     { return(m_stupidity >= random); }
 
     // Overloaded operator for << 
     // Preconditions: None
