@@ -20,6 +20,8 @@ int main()
 	bool driving=true;
 	while(driving)
 	{
+	
+	
 	if(rand() % 20 == 1)//5% chance to have pedestrian with 
 	{
 	  Pedestrian p;
@@ -28,6 +30,8 @@ int main()
 	  {
 
 	    p.walk(r,c);
+	    r.placeObj(1,p.getPos(),'p');
+	    cout <<r;
 	  }
 	}
 	else//if no pedestrian in street have animal try to cross
@@ -55,13 +59,13 @@ int main()
 	  }
 	  
 	}
-       	r.placeObj(c.getWidth(),c.getPos(),'c');
+       	
 	c.changeBattery(-1);//sub battery
 	dist++;
 	c.amble();
 	//Output road state
 	cout<<r;
-       
+	r.placeObj(c.getWidth(),c.getPos(),'c');
 	//end conds
 	if(c.getDamage() > Car::DAMAGE_MAX)	//damage 
 	  {
