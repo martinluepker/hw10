@@ -20,7 +20,7 @@ int main()
 	bool driving=true;
 	while(driving)
 	{
-	
+	  r.placeObj(Road::INIT_WIDTH,0,' ');//clears
 	  c.amble(); //move the car around
 	  if(rand() % 20 == 1)//5% chance to have pedestrian with 
 	    {
