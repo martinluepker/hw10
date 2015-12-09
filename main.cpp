@@ -37,7 +37,7 @@ int main()
 	    
 	  }
 	  
-	  
+	  //CRITITCAL PART
 	  if(animals[animalIndex].getPos() >= c.getPos() || 
 	     animals[animalIndex].getPos() +animals[animalIndex].getWidth() <= c.getPos()+ c.getWidth())
 	    // if hit add dammage and battery switch animal hit bool
@@ -46,17 +46,18 @@ int main()
 	    c.incrBattery(animals[animalIndex].getWeight());
 	    animals[animalIndex].hit();
 	    lonestar(animals[animalIndex]);
+	    c.incrEscore(animals[animalIndex].getWeight());
 	  }
 	  
 	  // say comment
 	  
 	  // add escore
-	  c.incrEscore(animals[animalIndex].getWeight());
+	  
 	}
        	
 	//c.changeBattery();//sub battery
 	dist++;
-	//change pos on track using switch
+	c.amble();
 	cout<<r;
 	//end conds
 		//damage 
