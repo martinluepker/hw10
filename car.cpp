@@ -21,6 +21,7 @@ void Car::incrBattery(const int weight)
   return;
 }
 
+
 void Car::incrDamage(const int weight) 
 {
   if (weight > 0) 
