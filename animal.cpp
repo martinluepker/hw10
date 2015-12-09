@@ -47,3 +47,4 @@ void Animal::setWidth(const int width)
    m_species=species;
    return;
  }
+

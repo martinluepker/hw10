@@ -80,8 +80,7 @@ class Animal
     int getPos(){return m_pos;}
     void hit(){m_hit = true;}
     void setSpecies(const string species);
-    
-    friend ostream& operator <<(ostream& outs, const Animal& r);
+    string getSpecies()const {return(m_species);}
 };
 
 #endif

@@ -14,12 +14,10 @@ creates 3 classes
 class Car 
 {
   private:
-    static const int BATTERY_MAX = 100;   // max battery value
     static const int BATTERY_RATE = 2;    // amt to divide 
                                           //  weight when
                                           //  incr'ing battery
-
-    static const int DAMAGE_MAX = 100;    // max damage value
+                                          
     static const int DAMAGE_RATE = 10;    // amt to divide 
                                           //  weight when
                                           //  incr'ing damage
@@ -31,6 +29,8 @@ class Car
     int m_pos;
     
   public:
+    static const int BATTERY_MAX = 100;   // max battery value
+    static const int DAMAGE_MAX = 100;    // max damage value
     // Default constructor for Car
     // Preconditions: None
     // Postconditions: m_width set to 4, m_damage set to 0,

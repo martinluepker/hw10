@@ -33,6 +33,7 @@ void lonestar(Animal & a)
 		getline(cin,sent);
 	}
 	cout<<sent;
+	cout<<"You've hit a "<< a.getSpecies() <<" !!! Can I be of assistance?"<<endl;
 	fin.close();
 }
 
