@@ -1,40 +1,62 @@
+/*
+
+ */
+
 #include "header.h"
 using namespace std;
+#define STUPID_LEVELS 99
 
 int main()
 {
 	srand(time(NULL));
 	Car c;
 	Road r;
-	Animal a[NUM_ANIMALS];
+	Animal animals[NUM_ANIMALS];
 	
 	int dist;
-	makeAnimals(a);//fills the animal array
+	makeAnimals(animals);//fills the animal array
 	
 	
 	bool driving=1;
 	while(driving)
 	{
-	if(rand() % 100 < 5 )//5% chance to have pedestrian with 
+	if(rand() % 20 == 1)//5% chance to have pedestrian with 
 	{
-	  Pedestrian P;
+	  Pedestrian p;
+	  while(p.getPos()< r.INIT_WIDTH)
+	  {
+	    p.walk(r,c);
+	  }
 	}
 	else//if no pedestrian in street have animal try to cross
 	{
-	  Animal a;
+	  int animalIndex = animals[rand() % NUM_ANIMALS];
+	  if(animals[animalIndex].chooseToRun(rand() % STUPID_LEVELS))
+	  {
+	    animals[animalIndex].setPos(rand() % INIT_WIDTH);
+	    
+	  }
+	  
+	  
+	  if(animals[animalIndex].getPos() >= c.getPos() || 
+	     animals[animalIndex].getPos() +animals[animalIndex].getWidth() <= c.getPos()+ c.getWidth())
+	    // if hit add dammage and battery switch animal hit bool
+	  {
+	    c.incrDamage(animals[animalIndex].getWeight());
+	    c.incrBattery(animals[animalIndex].getWeight());
+	    animals[animalIndex].hit();
+	  }
+	  
+	  // say comment
+	  lonestar();
+	  // add escore
+	  c.incrEscore(animals[animalIndex].getWeight());
 	}
-	
-		// if hit add dammage and battery switch animal hit bool
-		// say comment
-		// add escore
-		//else nothing
-		
-	
-	
-	//sub battery
+       	
+	//c.changeBattery();//sub battery
 	dist++;
 	//change pos on track using switch
-	
+	cout<<r;
 	//end conds
 		//damage 
 		//dist

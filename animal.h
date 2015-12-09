@@ -32,10 +32,10 @@ class Animal
                                    //  whether animal runs onto
                                    //  road
     bool m_hit;
-
+    int m_pos;
   public:
-  
-    Animal();
+
+    Animal():m_hit(0){}
 
     // Accessor for m_width
     // Preconditions: None
@@ -76,7 +76,9 @@ class Animal
     // Preconditions: 0 < width < Road::MAX_WIDTH
     // Postconditions: m_weight set to weight (minimum 1)
     void setWidth(const int width);
-    
+    void setPos(const int pos){m_pos = pos;}
+    int getPos(){return m_pos;}
+    void hit(){m_hit = true;}
     void setSpecies(const string species);
 };
 

@@ -8,7 +8,9 @@ creates 3 classes
 #include "header.h"
 #include "animal.h"
 
-Animal::Animal(){}
+Animal::Animal(){
+  
+}
 
 ostream& operator << (ostream& outs, const Animal& a) 
 {
