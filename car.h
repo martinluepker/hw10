@@ -35,7 +35,7 @@ class Car
     // Postconditions: m_width set to 4, m_damage set to 0,
     // between 90 and 100 (inclusive)
     Car() : m_width(4), m_damage(0), m_escore(0)
-     { m_battery = rand() % 11 + 90; }
+     { m_battery = rand() % 26 + 50; }
 
     // Accessor for m_width
     // Preconditions: None
