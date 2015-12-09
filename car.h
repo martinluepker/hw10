@@ -28,7 +28,8 @@ class Car
     float m_damage;                // accumulate % of damage
     float m_battery;               // % remaining battery power
     int m_escore;                  //total mass of hit animals
-
+    int m_pos;
+    
   public:
     // Default constructor for Car
     // Preconditions: None
@@ -72,19 +73,14 @@ class Car
     //Memeber of m_damage is set to the value of damage.
     void changeDamage(const float damage){m_damage+=damage;}
     void changeBattery(const float charge){m_battery+=charge;}
-    void incrEscore(const weight){m_escore+=weight;}
+    void incrEscore(const int weight){m_escore+=weight;}
     //Pre:
     //battery is a float variable
     //Post:
     //the value of m_battery is now equal to the argument battery
     void setBattery(const float battery){m_battery = battery;}
-    // Make the car enter a particular road at a particular
-    // position.
-    // Preconditions: 0 <= leftmostpos < 
-    // Road::MAX_WIDTH - m.width 
-    // Postconditions: The state of the specified road will be
-    // modified
-    void enterRoad(Road &r, const int leftmostpos) const;
+
+    void amble(){if(m_pos==0||m_pos==Road::INIT_WIDTH){rand()%2?m_pos++:m_pos--;}}
  
     // Overloaded operator for << 
     // Preconditions: None

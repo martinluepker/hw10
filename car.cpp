@@ -21,7 +21,6 @@ void Car::incrBattery(const int weight)
   return;
 }
 
-
 void Car::incrDamage(const int weight) 
 {
   if (weight > 0) 
@@ -31,19 +30,6 @@ void Car::incrDamage(const int weight)
     if (m_damage > DAMAGE_MAX)
       m_damage = DAMAGE_MAX;
   }
-  return;
-}
-
-void Car::enterRoad(Road &r,const int leftmostpos) const
-{
-  if ((leftmostpos >= 0) &&
-      (leftmostpos <= r.getWidth() - m_width))
-    r.placeObj(m_width, leftmostpos,SYMBOL);
-  else cout << "Error: Car:enterRoad cannot place a"
-            << " car of width " << m_width 
-            << " at position " << leftmostpos
-            << " of a road of width " 
-            << r.getWidth() << endl;
   return;
 }
 
