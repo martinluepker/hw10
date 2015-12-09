@@ -19,7 +19,7 @@ void Pedestrian::walk(Road r, Car c)
 {
 	if(m_bac>=0.1)
 	{
-		rand()%100>=75?m_pos++:m_pos--;
+		rand()%4<3?m_pos++:m_pos--;
 
 	}
 	else
