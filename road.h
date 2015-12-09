@@ -42,7 +42,8 @@ class Road
     // Postconditions: Value of m_width is returned
     int getWidth() const { return(m_width); }
     // A function to get a sector struct from the road class
-    
+    // Preconditions: getSector is a member function of an initilized road class.
+    // Postconditions: A sector struct is returned from the class.
     segment getSector(int num) const { return(m_sectors[num]); }
     // Mark appropriate sectors of the road to indicate that
     // a car is there.

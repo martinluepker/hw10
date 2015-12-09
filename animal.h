@@ -76,12 +76,33 @@ class Animal
     // Preconditions: 0 < width < Road::MAX_WIDTH
     // Postconditions: m_weight set to weight (minimum 1)
     void setWidth(const int width);
+    //Mutator for m_pos
+    //Pre: none.
+    //Post: value of m_pos = pos
     void setPos(const int pos){m_pos = pos;}
+    //Accessor for m_pos
+    //Pre: none
+    //Post: returns value of m_pos
     int getPos(){return m_pos;}
+    //Function to change the hit state of the animal class
+    //Pre: m_hit is still initilized to false.
+    //Post: m_hit is now true.
     void hit(){m_hit = true;}
+    //An accessor for the m_hit member.
+    //Pre:none.
+    //Post:value of m_hit is returned.
     bool gethit(){return m_hit;}
+    //A Mutator for the species member.
+    //Pre: none.
+    //Post: value of string species is now m_species
     void setSpecies(const string species);
+    //Accessor for the m_species member
+    //Pre: none.
+    //Post: value of m_species is returned.
     string getSpecies()const {return(m_species);}
+    //Accessor for SYMBOl member
+    //Pre: none
+    //Post: value of SYMBOL is returned.
     char getSymbol() const { return (SYMBOL);}
 };
 

@@ -41,7 +41,13 @@ class Car
     // Preconditions: None
     // Postconditions: Value of m_width is returned
     int getWidth() const { return(m_width); }
+    // Accessor for m_pos
+    // Precondtions: None
+    // Value of m_pos is returned.
     int getPos() const {return m_pos;}
+    // Accessor for SYMBOL
+    //Pre: none.
+    //Post: value of SYMBOL is returned.
     char getSymbol() const { return (SYMBOL);}
     // Accessor for m_damage
     // Preconditions: None
@@ -72,16 +78,30 @@ class Car
     //Post:
     //Memeber of m_damage is set to the value of damage.
     void changeDamage(const float damage){m_damage+=damage;}
+    //A function to change the value of the battery
+    //Pre: none
+    //Post: charge is added to the value of m_battery
     void changeBattery(const float charge){m_battery+=charge;}
+    //A function to increase the escore of the car
+    //Pre: none
+    //Post: weight is added to the escore of the calling car.
     void incrEscore(const int weight){m_escore+=weight;}
+    //Accessor for m_escore.
+    //Pre: none.
+    //Post: value of m_escore is returned
     int getEscore()const {return(m_escore);}
+    //Mutator for m_pos
+    //Pre: none
+    //Post: value of m_pos is returned
     void setPos(const int pos){m_pos=pos;}
     //Pre:
     //battery is a float variable
     //Post:
     //the value of m_battery is now equal to the argument battery
     void setBattery(const float battery){m_battery = battery;}
-
+    //A function to move the car to the left or right within the boundaries of the road
+    //pre none.
+    //Post: m_pos is either incremented or decremented.
     void amble();
  
     // Overloaded operator for << 
