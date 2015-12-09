@@ -79,6 +79,7 @@ class Animal
     void setPos(const int pos){m_pos = pos;}
     int getPos(){return m_pos;}
     void hit(){m_hit = true;}
+    bool gethit(){return m_hit;}
     void setSpecies(const string species);
     string getSpecies()const {return(m_species);}
     char getSymbol() const { return (SYMBOL);}
