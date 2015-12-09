@@ -15,8 +15,15 @@ int main()
 	bool driving=1;
 	while(driving)
 	{
-	//5% chance to have pedestrian with 
-	//if no pedestrian in street have animal try to cross
+	if(rand() % 100 < 5 )//5% chance to have pedestrian with 
+	{
+	  Pedestrian P;
+	}
+	else//if no pedestrian in street have animal try to cross
+	{
+	  Animal a;
+	}
+	
 		// if hit add dammage and battery switch animal hit bool
 		// say comment
 		// add escore
