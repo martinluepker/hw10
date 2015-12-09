@@ -68,7 +68,7 @@ int main()
 	  cout<<r;
 	  
 	  //end conds
-	  if(c.getDamage() > Car::DAMAGE_MAX)	//damage 
+	  if(c.getDamage() >= Car::DAMAGE_MAX)	//damage 
 	    {
 	      cout<<"\nCar too damaged to go on. Exiting.\n";
 	      driving = false;
