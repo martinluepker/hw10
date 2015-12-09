@@ -12,11 +12,13 @@ using namespace std;
 int main()
 {
 	srand(time(NULL));
+	for(int times = 0; times < 3 ; times ++)
+	{
 	Car c;
 	Road r;
 	Animal animals[NUM_ANIMALS];
 	
-	int dist;
+	int dist = 0;
 	makeAnimals(animals);//fills the animal array
 	c.setPos(Road::INIT_WIDTH /2);
 	bool driving=true;
@@ -36,6 +38,7 @@ int main()
 		  p.walk(r,c);
 		  cout <<r;
 		}
+	      cout<<endl;
 	    }
 	  else//if no pedestrian in street have animal try to cross
 	    {
@@ -108,6 +111,7 @@ cout<<"- Animals hit:"<<endl;
 	  {
 	    cout<<animals[i];
 	  }
+	}
 	}
 	return 0;
 }

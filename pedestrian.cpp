@@ -10,7 +10,7 @@ creates 3 classes
 
 Pedestrian::Pedestrian()
 {
-	m_bac=(rand()%3)/10;
+	m_bac=static_cast<float>(rand()%3)/10;
 	m_name=names[rand()%NAME_NUM];
 	m_pos=0;
 }
