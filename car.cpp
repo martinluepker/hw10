@@ -23,7 +23,7 @@ void Car::incrBattery(const int weight)
 
 void Car::amble()
 {
-  if(m_pos!=0||m_pos!=Road::INIT_WIDTH)-1)
+  if(m_pos!=0||m_pos!=Road::INIT_WIDTH-1)
     rand()%2?m_pos++:m_pos--;
   else if(m_pos==0)
     m_pos++;
