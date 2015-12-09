@@ -1,5 +1,5 @@
 /*
-Martin Luepker
+Martin Luepker and Ben Krueger
 11/15/15
 J
 Leopold
@@ -20,11 +20,11 @@ creates 3 classes
 using namespace std;
 
 // Constants
-
+//Number of animals to spawn
 const int NUM_ANIMALS=10;
-
+//NUmber of comments loserstar will use
 const int NUM_COMMENTS=10;                                   
-                                 
+//maximum distance to travel                                 
 const int MAX_DIST=100;
 
 

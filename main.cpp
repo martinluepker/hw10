@@ -1,5 +1,8 @@
 /*
-
+Programmers: Martin Luepker and Ben Krueger
+ID: and bokkw4
+file:Main.cpp
+Description: a program to simulate a self driving car. 
  */
 
 #include "header.h"
@@ -15,7 +18,7 @@ int main()
 	
 	int dist;
 	makeAnimals(animals);//fills the animal array
-	
+	cout<<"Car with "<<
 	c.setPos(Road::INIT_WIDTH /2);
 	bool driving=true;
 	while(driving)
@@ -30,8 +33,8 @@ int main()
 	      while(p.getPos()< Road::INIT_WIDTH)
 		{
 
-		  p.walk(r,c);
 		  r.placeObj(1,p.getPos(),'p');
+		  p.walk(r,c);
 		  cout <<r;
 		}
 	    }
@@ -91,7 +94,10 @@ int main()
 	cout<<"Finals report\nYou hit:"<<endl;
 	for(int i = 0; i < NUM_ANIMALS; i ++)
 	{
-	  cout<<animals[i]<<endl;
+   	  if(animals[i].gethit())
+	  {
+	    cout<<animals[i]<<endl;
+	  }
 	}
 	//battery left
 	cout<<"You have :"<<c.getBattery() << " left."<<endl;
