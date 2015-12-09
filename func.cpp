@@ -34,7 +34,7 @@ void lonestar(Animal & a)
 	}
 	cout<<sent<<endl;
 	fin.ignore(500);
-	cout<<"You've hit a "<< a.getSpecies() <<" !!! Can I be of assistance?"<<endl;
+	cout<<"You've hit a "<< a.getSpecies() <<"!!! Can I be of assistance?"<<endl;
 	fin.close();
 }
 
