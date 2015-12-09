@@ -27,8 +27,9 @@ class Pedestrian
 	public:
 		Pedestrian();
 		void walk(Road,Car);
-		int getPos(){return m_pos;}
+		int getPos()const {return m_pos;}
 		void setPos(int pos){ m_pos = pos;}
+		char getSymbol()const{ return (SYMBOL);}
 };
 
 #endif

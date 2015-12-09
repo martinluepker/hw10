@@ -81,6 +81,7 @@ class Animal
     void hit(){m_hit = true;}
     void setSpecies(const string species);
     string getSpecies()const {return(m_species);}
+    char getSymbol() const { return (SYMBOL);}
 };
 
 #endif

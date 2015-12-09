@@ -16,8 +16,7 @@ class Car
   private:
     static const int BATTERY_RATE = 2;    // amt to divide 
                                           //  weight when
-                                          //  incr'ing battery
-                                          
+                                          //  incr'ing battery                
     static const int DAMAGE_RATE = 10;    // amt to divide 
                                           //  weight when
                                           //  incr'ing damage
@@ -43,6 +42,7 @@ class Car
     // Postconditions: Value of m_width is returned
     int getWidth() const { return(m_width); }
     int getPos() const {return m_pos;}
+    char getSymbol() const { return (SYMBOL);}
     // Accessor for m_damage
     // Preconditions: None
     // Postconditions: Value of m_damage is returned
