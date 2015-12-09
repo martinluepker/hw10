@@ -18,7 +18,9 @@ int main()
 	
 	int dist;
 	makeAnimals(animals);//fills the animal array
-	cout<<"Car with "<<
+	cout<<"Car damage: "<< c.getDamage()
+		<<"% and Remaining battery life: "
+		<<c.getBattery()<<"%"<<endl;
 	c.setPos(Road::INIT_WIDTH /2);
 	bool driving=true;
 	while(driving)
@@ -78,7 +80,7 @@ int main()
 	    }	
 	  else if(dist >= MAX_DIST)//dist
 	    {
-	      cout<<"\nCar has completed \n";
+	      cout<<"\nCar has reached its destination \n";
 	      driving =false;
 	    }
 	  else if(c.getBattery() <= 0)//battery empty
@@ -86,27 +88,27 @@ int main()
 	      cout<<"\nBattery ran out.\n";
 	      driving = false;
 	    }
-	  cout<<"\nPosition of car:"<<c.getPos()
-	      <<"Escore:"<<c.getEscore()<<endl;
+		
+	cout<<endl;
 	}//while
 	//print 
 		//list of animals hit
-	cout<<"Finals report\nYou hit:"<<endl;
+	
+
+	//battery left
+cout<<"Simulation terminated with:"<<endl;
+cout<<"- Remaining car battery life: "<<c.getBattery()<<"%"<<endl;
+cout<<"- Car damage: "<<c.getDamage()<<"%"<<endl;
+cout<<"- Car's e-score: "<<c.getEscore()<<endl;
+cout<<"- Distance traveled: "<<dist<<"km"<<endl;
+cout<<"- Animals hit:"<<endl;
 	for(int i = 0; i < NUM_ANIMALS; i ++)
 	{
    	  if(animals[i].gethit())
 	  {
-	    cout<<animals[i]<<endl;
+	    cout<<animals[i];
 	  }
 	}
-	//battery left
-	cout<<"You have :"<<c.getBattery() << " left."<<endl;
-	//damage level
-	cout<<"The damage level is:"<<c.getDamage()<<endl;
-	//e-score
-	cout<<"The e score is :"<<c.getEscore()<<endl;
-	//distance traveled
-	cout<<"The distance traveled was :"<< dist;
 	return 0;
 }
 /*
