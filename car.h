@@ -27,13 +27,14 @@ class Car
     int m_width;                   // # of road sectors
     float m_damage;                // accumulate % of damage
     float m_battery;               // % remaining battery power
+    int m_escore;                  //total mass of hit animals
 
   public:
     // Default constructor for Car
     // Preconditions: None
     // Postconditions: m_width set to 4, m_damage set to 0,
     // between 90 and 100 (inclusive)
-    Car() : m_width(4), m_damage(0)
+    Car() : m_width(4), m_damage(0), m_escore(0)
      { m_battery = rand() % 11 + 90; }
 
     // Accessor for m_width
@@ -69,7 +70,9 @@ class Car
     //damage is a float
     //Post:
     //Memeber of m_damage is set to the value of damage.
-    void setDamage(const float damage){m_damage = damage;}
+    void changeDamage(const float damage){m_damage+=damage;}
+    void changeBattery(const float charge){m_battery+=charge;}
+    void incrEscore(const weight){m_escore+=weight;}
     //Pre:
     //battery is a float variable
     //Post:
