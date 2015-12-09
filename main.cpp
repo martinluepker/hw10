@@ -18,9 +18,6 @@ int main()
 	
 	int dist;
 	makeAnimals(animals);//fills the animal array
-	cout<<"Car damage: "<< c.getDamage()
-		<<"% and Remaining battery life: "
-		<<c.getBattery()<<"%"<<endl;
 	c.setPos(Road::INIT_WIDTH /2);
 	bool driving=true;
 	while(driving)
@@ -71,7 +68,10 @@ int main()
 	
 	  //Output road state
 	  cout<<r;
-	  
+	  cout<<"Car damage: "<< c.getDamage()
+		<<"% and Remaining battery life: "
+		<<c.getBattery()<<"%"<<endl;	
+	  cout<<endl;
 	  //end conds
 	  if(c.getDamage() >= Car::DAMAGE_MAX)	//damage 
 	    {
@@ -88,8 +88,8 @@ int main()
 	      cout<<"\nBattery ran out.\n";
 	      driving = false;
 	    }
-		
-	cout<<endl;
+	
+	
 	}//while
 	//print 
 		//list of animals hit
