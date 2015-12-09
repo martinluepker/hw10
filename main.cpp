@@ -28,7 +28,7 @@ int main()
 	  if(rand() % 20 == 1)//5% chance to have pedestrian with 
 	    {
 	      Pedestrian p;
-	      cout<<"\nA pedestrian appears.\n";
+	      cout<<"\n"<<p.getName()<<" appears with BAC of "<<p.getBac()<<endl;
 	      while(p.getPos()< Road::INIT_WIDTH)
 		{
 
