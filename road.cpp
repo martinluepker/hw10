@@ -60,7 +60,14 @@ void Road::placeObj(const int width,
 ostream& operator << (ostream& outs, const Road& r) 
 {
   for (int i = 0; i < r.m_width; i++)
-    outs << "|" << r.m_sectors[i].ped;  
+  {
+      if(r.m_sectors[i].ped==' '&&r.m_sectors[i].ani==' ')
+        outs << "|" << r.m_sectors[i].car; 
+      if(r.m_sectors[i].ped=='p')
+        outs << "|" << r.m_sectors[i].ped;
+      if(r.m_sectors[i].ani=='a')
+        outs << "|" << r.m_sectors[i].ani;
+  }
   outs << "|\n";
   return(outs);
 }
