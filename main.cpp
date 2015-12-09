@@ -16,12 +16,13 @@ int main()
 	int dist;
 	makeAnimals(animals);//fills the animal array
 	
-	
+	c.setPos(Road::INIT_WIDTH /2);
 	bool driving=true;
 	while(driving)
 	{
 	  r.placeObj(Road::INIT_WIDTH,0,' ');//clears
 	  c.amble(); //move the car around
+	  r.placeObj(c.getWidth(),c.getPos(),'c');
 	  if(rand() % 20 == 1)//5% chance to have pedestrian with 
 	    {
 	      Pedestrian p;
@@ -65,7 +66,7 @@ int main()
 	
 	  //Output road state
 	  cout<<r;
-	  r.placeObj(c.getWidth(),c.getPos(),'c');
+	  
 	  //end conds
 	  if(c.getDamage() > Car::DAMAGE_MAX)	//damage 
 	    {
@@ -82,14 +83,24 @@ int main()
 	      cout<<"\nBattery ran out.\n";
 	      driving = false;
 	    }
-	 
+	  cout<<"\nPosition of car:"<<c.getPos()
+	      <<"Escore:"<<c.getEscore()<<endl;
 	}//while
 	//print 
 		//list of animals hit
-		//battery left
-		//damage level
-		//e-score
-		//distance traveled
+	cout<<"Finals report\nYou hit:"<<endl;
+	for(int i = 0; i < NUM_ANIMALS; i ++)
+	{
+	  cout<<animals[i]<<endl;
+	}
+	//battery left
+	cout<<"You have :"<<c.getBattery() << " left."<<endl;
+	//damage level
+	cout<<"The damage level is:"<<c.getDamage()<<endl;
+	//e-score
+	cout<<"The e score is :"<<c.getEscore()<<endl;
+	//distance traveled
+	cout<<"The distance traveled was :"<< dist;
 	return 0;
 }
 /*
