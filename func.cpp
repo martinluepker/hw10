@@ -22,3 +22,4 @@ void makeAnimals(Animal a[])
 	}
 	fin.close();
 }
+void 
