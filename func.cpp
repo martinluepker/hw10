@@ -22,9 +22,6 @@ void makeAnimals(Animal a[])
 	}
 	fin.close();
 }
-<<<<<<< HEAD
-void 
-=======
 
 void lonestar()
 {
@@ -38,4 +35,4 @@ void lonestar()
 	cout<<sent;
 	fin.close();
 }
->>>>>>> 52c06aab5d49d996427c03c76de1b631938047cc
+
