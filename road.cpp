@@ -68,6 +68,6 @@ ostream& operator << (ostream& outs, const Road& r)
       if(r.m_sectors[i].ani=='a')
         outs << "|" << r.m_sectors[i].ani;
   }
-  outs << "|\n";
+  outs << "|\n"<<endl;
   return(outs);
 }

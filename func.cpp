@@ -30,9 +30,10 @@ void lonestar(Animal & a)
 	string sent;
 	for(int i=0;i<=rand()%NUM_COMMENTS;i++)
 	{
-		getline(cin,sent);
+		getline(fin,sent);
 	}
-	cout<<sent;
+	cout<<sent<<endl;
+	fin.ignore(500);
 	cout<<"You've hit a "<< a.getSpecies() <<" !!! Can I be of assistance?"<<endl;
 	fin.close();
 }
