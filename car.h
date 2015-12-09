@@ -51,6 +51,7 @@ class Car
     // Postconditions: Value of m_battery is returned
     float getBattery() const { return(m_battery); }
 
+    
     // Increment the battery power by the weight of some road
     // obstacle.
     // Preconditions: weight > 0
@@ -64,7 +65,16 @@ class Car
     // Postconditions: m_damage incremented by
     // weight/DAMAGE_RATE, to maximum value DAMAGE_MAX
     void incrDamage(const int weight);
-
+    //Pre:
+    //damage is a float
+    //Post:
+    //Memeber of m_damage is set to the value of damage.
+    void setDamage(const float damage){m_damage = damage;}
+    //Pre:
+    //battery is a float variable
+    //Post:
+    //the value of m_battery is now equal to the argument battery
+    void setBattery(const float battery){m_battery = battery;}
     // Make the car enter a particular road at a particular
     // position.
     // Preconditions: 0 <= leftmostpos < 
@@ -72,12 +82,13 @@ class Car
     // Postconditions: The state of the specified road will be
     // modified
     void enterRoad(Road &r, const int leftmostpos) const;
-
+ 
     // Overloaded operator for << 
     // Preconditions: None
     // Postconditions: State of Car will be output to outs,
     // thereby modifying ostream outs
     friend ostream& operator <<(ostream& outs, const Car& c);
+    
 };
 
 #endif

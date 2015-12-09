@@ -1,8 +1,8 @@
-CC=clang
+CC=fg++
 CFLAGS=-o
 SRC=*.cpp
 HEAD=*.h
-OBJ=carSimulate
+OBJ=m
 
 all:$(SRC) $(HEAD)
 	$(CC) $(CFLAGS) $(OBJ) $(SRC)

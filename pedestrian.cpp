@@ -17,15 +17,25 @@ Pedestrian::Pedestrian()
 
 void Pedestrian::walk(Road r, Car c)
 {
-	if(m_bac>=0.1?1:0)
+	if(m_bac>=0.1)
 	{
 		rand()%100>=75?m_pos++:m_pos--;
-		if(r.getSector(m_pos).ped==SYMBOL)
-		{}
+
 	}
 	else
 	{
 		m_pos++;
+	}
+	if(r.getSector(m_pos).ped == 'p' && r.getSector(m_pos).car  == 'c')
+	{
+	  if(m_bac >= 0.1)
+	  {
+	    c.incrDamage(10);
+	  }
+	  else
+	  {
+	    c.setDamage(c.getDamage() - 1);
+	  }
 	}
 	return;
 }
