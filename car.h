@@ -80,7 +80,7 @@ class Car
     //the value of m_battery is now equal to the argument battery
     void setBattery(const float battery){m_battery = battery;}
 
-    void amble(){if(m_pos==0||m_pos==Road::INIT_WIDTH){rand()%2?m_pos++:m_pos--;}}
+    void amble();
  
     // Overloaded operator for << 
     // Preconditions: None
