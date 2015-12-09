@@ -1,10 +1,4 @@
-/*
-Martin Luepker
-11/15/15
-J
-Leopold
-creates 3 classes
-*/
+
 #ifndef ROAD_H
 #define ROAD_H
 

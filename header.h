@@ -1,10 +1,4 @@
-/*
-Martin Luepker and Ben Krueger
-11/15/15
-J
-Leopold
-creates 3 classes
-*/
+
 #ifndef HEADER_H
 #define HEADER_H
 #include <cstdlib>

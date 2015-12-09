@@ -1,6 +1,8 @@
 /*
 Programmers: Martin Luepker and Ben Krueger
-ID: and bokkw4
+date: 12/1/15
+Section: J
+ID: mcld 35 and bokkw4
 file:Main.cpp
 Description: a program to simulate a self driving car. 
  */

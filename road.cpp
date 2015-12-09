@@ -1,10 +1,4 @@
-/*
-Martin Luepker
-11/15/15
-J
-Leopold
-creates 3 classes
-*/
+
 #include "header.h"
 #include "road.h"
 using namespace std;

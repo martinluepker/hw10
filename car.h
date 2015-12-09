@@ -1,10 +1,4 @@
-/*
-Martin Luepker
-11/15/15
-J
-Leopold
-creates 3 classes
-*/
+
 
 #ifndef CAR_H
 #define CAR_H
