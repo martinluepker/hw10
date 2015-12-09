@@ -14,7 +14,7 @@ creates 3 classes
 class Car 
 {
   private:
-    static const int BATTERY_RATE = 2;    // amt to divide 
+    static const int BATTERY_RATE = 5;    // amt to divide 
                                           //  weight when
                                           //  incr'ing battery                
     static const int DAMAGE_RATE = 10;    // amt to divide 
