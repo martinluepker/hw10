@@ -75,6 +75,7 @@ class Car
     void changeBattery(const float charge){m_battery+=charge;}
     void incrEscore(const int weight){m_escore+=weight;}
     int getEscore()const {return(m_escore);}
+    void setPos(const int pos){m_pos=pos;}
     //Pre:
     //battery is a float variable
     //Post:
