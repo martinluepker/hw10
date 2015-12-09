@@ -35,7 +35,7 @@ class Animal
     int m_pos;
   public:
 
-    Animal():m_hit(0){}
+    Animal();
 
     // Accessor for m_width
     // Preconditions: None

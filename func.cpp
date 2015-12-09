@@ -23,7 +23,7 @@ void makeAnimals(Animal a[])
 	fin.close();
 }
 
-void lonestar()
+void lonestar(Animal & a)
 {
 	ifstream fin;
 	fin.open("lonestar.dat");

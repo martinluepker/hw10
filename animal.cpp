@@ -9,7 +9,7 @@ creates 3 classes
 #include "animal.h"
 
 Animal::Animal(){
-  
+  m_hit = true;
 }
 
 ostream& operator << (ostream& outs, const Animal& a) 

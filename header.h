@@ -16,6 +16,7 @@ creates 3 classes
 #include "road.h"
 #include "car.h"
 #include "func.h"
+#include "pedestrian.h"
 using namespace std;
 
 // Constants

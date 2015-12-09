@@ -42,7 +42,7 @@ class Car
     // Preconditions: None
     // Postconditions: Value of m_width is returned
     int getWidth() const { return(m_width); }
-
+    int getPos() const {return m_pos;}
     // Accessor for m_damage
     // Preconditions: None
     // Postconditions: Value of m_damage is returned

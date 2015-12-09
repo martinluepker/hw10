@@ -27,7 +27,8 @@ class Pedestrian
 	public:
 		Pedestrian();
 		void walk(Road,Car);
-		
+		int getPos(){return m_pos;}
+		void setPos(int pos){ m_pos = pos;}
 };
 
 #endif

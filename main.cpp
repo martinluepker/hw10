@@ -23,17 +23,17 @@ int main()
 	if(rand() % 20 == 1)//5% chance to have pedestrian with 
 	{
 	  Pedestrian p;
-	  while(p.getPos()< r.INIT_WIDTH)
+	  while(p.getPos()< Road::INIT_WIDTH)
 	  {
 	    p.walk(r,c);
 	  }
 	}
 	else//if no pedestrian in street have animal try to cross
 	{
-	  int animalIndex = animals[rand() % NUM_ANIMALS];
+	  int animalIndex = rand() % NUM_ANIMALS;
 	  if(animals[animalIndex].chooseToRun(rand() % STUPID_LEVELS))
 	  {
-	    animals[animalIndex].setPos(rand() % INIT_WIDTH);
+	    animals[animalIndex].setPos(rand() % Road::INIT_WIDTH);
 	    
 	  }
 	  
@@ -45,10 +45,11 @@ int main()
 	    c.incrDamage(animals[animalIndex].getWeight());
 	    c.incrBattery(animals[animalIndex].getWeight());
 	    animals[animalIndex].hit();
+	    lonestar(animals[animalIndex]);
 	  }
 	  
 	  // say comment
-	  lonestar();
+	  
 	  // add escore
 	  c.incrEscore(animals[animalIndex].getWeight());
 	}

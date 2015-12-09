@@ -30,11 +30,11 @@ void Pedestrian::walk(Road r, Car c)
 	{
 	  if(m_bac >= 0.1)
 	  {
-	    c.incrDamage(10);
+	    c.changeDamage(-1);
 	  }
 	  else
 	  {
-	    c.setDamage(c.getDamage() - 1);
+	    c.changeDamage(1);
 	  }
 	}
 	return;
