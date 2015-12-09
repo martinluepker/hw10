@@ -22,4 +22,20 @@ void makeAnimals(Animal a[])
 	}
 	fin.close();
 }
+<<<<<<< HEAD
 void 
+=======
+
+void lonestar()
+{
+	ifstream fin;
+	fin.open("lonestar.dat");
+	string sent;
+	for(int i=0;i<=rand()%NUM_COMMENTS;i++)
+	{
+		getline(cin,sent);
+	}
+	cout<<sent;
+	fin.close();
+}
+>>>>>>> 52c06aab5d49d996427c03c76de1b631938047cc

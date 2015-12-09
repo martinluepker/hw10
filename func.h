@@ -12,6 +12,6 @@ using namespace std;
 
 
 void makeAnimals(Animal a[]);
-
+void lonestar();
 
 #endif
